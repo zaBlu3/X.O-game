@@ -1,0 +1,73 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>x.0</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+		integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+	<link rel="stylesheet" href="XO.css" />
+
+	<style>
+		
+	</style>
+</head>
+
+<body>
+	<div class="container">
+
+		<div id="buttons">
+			<button class="btn btn-primary center"onclick="window.location.reload()">End Game</button>
+			<button class="btn btn-danger center" onclick="resetBoard()">Reset current baord</button>
+			<button class="btn btn-primary center"onclick="undo()">Undo</button>
+			<button class="btn btn-danger center"onclick="save()">Save currnet board</button>
+			<button class="btn btn-primary center"onclick="load()">Load saved board</button>
+			<button class="btn btn-danger center"onclick="showRecord()">Minimum moves to win</button>
+		</div>
+
+		<br>
+
+		<div class="menu"  onclick="this.querySelector(`input[name='size']`).focus()"> <!-- when clicking the div it focused the input -->
+			<span>choose X or O <br></span>
+			<div class=" btn-group-toggle" data-toggle="buttons">
+				<label class="btn btn-danger center"><input type="radio" name="turn" id="X" checked>X</label>
+				<label class="btn btn-primary center"><input type="radio" name="turn">O</label>
+			</div>
+			 <span>size (3-9)</span> 
+			 <!--run fucntion only on enter press -->
+			<input onkeydown="if (event.keyCode == 13) changeSize(value)" name="size" type="number" value = "3" min="3" max="9" class="btn btn-outline-primary">
+		</div>
+		<h1 id="turn"></h1>
+		<div id="gameBoard"></div>
+	</div>
+
+
+
+
+
+	<div class="menu" style="display: none;">
+		Game Ended
+		<div id="endMenu"></div>
+		<button class="btn btn-secondary" onclick="undo(); hide_show_Div(finishMenu);">Undo last move</button>
+		<button class="btn btn-danger" onclick="resetBoard(); hide_show_Div(finishMenu);">Reset currnet board</button> <br>
+
+		<button class="btn btn-primary" onclick="resetGame()">Reset game and choose diffrent size or turn </button>
+	</div>
+
+
+
+
+
+
+
+	<script  src="XOscript.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>

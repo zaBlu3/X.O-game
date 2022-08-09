@@ -1,0 +1,99 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.8);
+	align-items: center;
+	justify-content: center;
+    color: blanchedalmond;
+    font-size: 3em;
+}
+/* for end menue button*/
+.menu button{ 
+    font-size: 0.5em;
+    color: black;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content : flex-end;
+}
+
+.center {
+    margin: auto;
+    color: black;
+    font-size: 1em;
+    
+} 
+table ,td ,tr {
+    background: linear-gradient(125deg ,rgba(0,163,232,255) , red );
+    border: 2px solid white;
+
+}
+td {
+    
+    height: 100;
+    min-width: 100;
+}
+#buttons {
+    padding: 10;
+    margin : auto;
+    width: fit-content ;height: fit-content;
+    display: flex;
+    justify-content: space-between;
+}
+body{
+    /*display: flex;
+    flex-direction: column;*/
+    background: linear-gradient(to right ,rgba(0,163,232,255), red );
+}
+#gameboard{
+   /* width:1200px;
+    height:1200px;
+    display: flex;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+    margin-right: -50%;
+    position: flex;
+    width: 50%;
+    height: 50%;
+    
+    justify-self : center;
+    align-items: center;*/
+    white-space: nowrap;
+   
+}
+#turn{
+   font-family: "Lucida Console", "Courier New", monospace;;
+   font-size: 3em;
+   text-shadow: 2px 2px 5px red,2px 2px 10px rgba(0,163,232,255),2px 2px 10px whitesmoke;		  
+   color: white;
+   padding-bottom: 50;
+   text-align: center;
+
+}
+#turn.x{
+    color: red;
+    font-size: 10em;
+    text-shadow: 2px 2px 5px red, 2px 2px 10px whitesmoke;		  
+
+}
+#turn.o{
+    color : rgba(0,163,232,255);
+    font-size: 10em;
+    text-shadow: 2px 2px 10px rgba(0,163,232,255),2px 2px 10px whitesmoke;		  
+
+}
+.center-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+  }
